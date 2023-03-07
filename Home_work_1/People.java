@@ -2,22 +2,68 @@ package Home_work_1;
 
 import java.time.LocalDate;
 
-public class People {
-
-    int id;
-    private String fName;
+public class People extends Person {
+    private int id;
+    String fname;
     String name;
-    LocalDate birghtday;
-    String sex;
-    String status;
-    public String fname;
+    private String getLname;
+    private LocalDate birghtday;
+    private String sex;
+    private String status;
 
-    public People(int id, String fName, String name, LocalDate birghtday, String sex, String status) {
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
         this.id = id;
-        this.fName = fName;
+    }
+
+    public String getFname() {
+        return fname;
+    }
+
+    public void setFname(String fname) {
+        this.fname = fname;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
         this.name = name;
+    }
+
+    public String getLname() {
+        return getLname;
+    }
+
+    public void setLname(String lname) {
+        this.getLname = lname;
+    }
+
+    public LocalDate getBirghtday() {
+        return birghtday;
+    }
+
+    public void setBirghtday(LocalDate birghtday) {
         this.birghtday = birghtday;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
         this.sex = sex;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
         this.status = status;
     }
 
@@ -25,12 +71,11 @@ public class People {
     public String toString() {
         return "People{" +
                 "id=" + id +
-                ", fname='" + fName + '\'' +
+                ", fname='" + fname + '\'' +
                 ", name='" + name + '\'' +
-                ", lname='" + birghtday + '\'' +
-                ", birghtday=" + sex +
-                ", sex='" + status + '\'' +
+                ", lname='" + getLname + '\'' +
+                ", birghtday=" + birghtday +
+                ", sex='" + sex + '\'' +
                 '}';
     }
-
 }
