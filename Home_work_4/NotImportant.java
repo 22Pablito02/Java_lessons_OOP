@@ -1,0 +1,15 @@
+package Home_work_4;
+
+import java.time.LocalDate;
+
+public class NotImportant extends Task {
+
+    public NotImportant(LocalDate data, String node, String deadLineTime, String deadLineDate, String avtor) {
+        super(data, node, deadLineTime, deadLineDate, avtor);
+    }
+
+    @Override
+    public String toString() {
+        return "Not important " + super.toString();
+    }
+}

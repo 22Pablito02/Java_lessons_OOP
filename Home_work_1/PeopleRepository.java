@@ -1,5 +1,8 @@
 package Home_work_1;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1283c4674ed1dd14b606f1f5c688bb7179f7e420
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -10,6 +13,10 @@ public class PeopleRepository extends People implements TreeModelable {
     public static Scanner input = new Scanner(System.in);
     private List<List<Unity>> family = new ArrayList<>();
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1283c4674ed1dd14b606f1f5c688bb7179f7e420
     public People addInfoAboutNewPeople() {
 
         System.out.println("Введите Фамилию и нажмите Enter");

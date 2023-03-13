@@ -73,8 +73,14 @@ public class Main {
                 pr.setFamily(k3.getPairs());
                 pr.setFamily(k4.getPairs());
 
+<<<<<<< HEAD
                 System.out.println(pr);
                 // pr.getAllTree();
                 // pr.getTreeByOnePeople();
+=======
+                // System.out.println(pr);
+                pr.getAllTree();
+                pr.getTreeByOnePeople();
+>>>>>>> 1283c4674ed1dd14b606f1f5c688bb7179f7e420
         }
 }
