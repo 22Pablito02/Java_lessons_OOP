@@ -14,7 +14,8 @@ public class Unity {
 
     @Override
     public String toString() {
-        return String.format("%s %s %s %s %s \n", p1.fname, p1.name, r, p2.fname, p2.name);
+        return String.format("%s %s %s %s %s \n", p1.getFname(), p1.getName(), r, p2.getFname(), p2.getName());
     }
-
 }
+
+

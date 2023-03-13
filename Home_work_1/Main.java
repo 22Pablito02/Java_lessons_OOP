@@ -9,7 +9,7 @@ public class Main {
 
         public static void main(String[] args) {
 
-                ArrayList<ArrayList<Unity>> family = new ArrayList<>();
+                PeopleRepository pr = new PeopleRepository();
 
                 People p1 = CreatePeople.getInstance()
                                 .setId()
@@ -32,8 +32,8 @@ public class Main {
                 Kin k1 = new Kin();
                 Kin k2 = new Kin();
 
-                k1.setKin(p1, Relationship.husband, p2);
-                k2.setKin(p2, Relationship.wife, p1);
+                k1.setKin(p1, Relationship.HUSBAND, p2);
+                k2.setKin(p2, Relationship.WIFE, p1);
 
                 People p3 = CreatePeople.getInstance()
                                 .setId()
@@ -43,12 +43,12 @@ public class Main {
                                 .setSex("Ж")
                                 .setStatus("дочь")
                                 .create();
-
+    
                 Kin k3 = new Kin();
-                k3.setKin(p1, Relationship.father, p3);
-                k3.setKin(p2, Relationship.mother, p3);
-                k1.setKin(p3, Relationship.daughter, p1);
-                k2.setKin(p3, Relationship.daughter, p2);
+                k3.setKin(p1, Relationship.FATHER, p3);
+                k3.setKin(p2, Relationship.MOTHER, p3);
+                k1.setKin(p3, Relationship.DAUGHTER, p1);
+                k2.setKin(p3, Relationship.DAUGHTER, p2);
 
                 People p4 = CreatePeople.getInstance()
                                 .setId()
@@ -60,19 +60,21 @@ public class Main {
                                 .create();
 
                 Kin k4 = new Kin();
-                k4.setKin(p1, Relationship.father, p4);
-                k4.setKin(p2, Relationship.mother, p4);
-                k1.setKin(p4, Relationship.son, p1);
-                k2.setKin(p4, Relationship.son, p2);
-                k3.setKin(p3, Relationship.sister, p4);
-                k4.setKin(p4, Relationship.brother, p3);
+                k4.setKin(p1, Relationship.FATHER, p4);
+                k4.setKin(p2, Relationship.MOTHER, p4);
+                k1.setKin(p4, Relationship.SON, p1);
+                k2.setKin(p4, Relationship.SON, p2);
+                k3.setKin(p3, Relationship.SISTER, p4);
+                k4.setKin(p4, Relationship.BROTHER, p3);
+                k3.setKin(p3, Relationship.BROTHER, p4);
 
-                family.add(k1.pairs);
-                family.add(k2.pairs);
-                family.add(k3.pairs);
-                family.add(k4.pairs);
+                pr.setFamily(k1.getPairs());
+                pr.setFamily(k2.getPairs());
+                pr.setFamily(k3.getPairs());
+                pr.setFamily(k4.getPairs());
 
-                System.out.println(family);
+                System.out.println(pr);
+                // pr.getAllTree();
+                // pr.getTreeByOnePeople();
         }
-
 }
